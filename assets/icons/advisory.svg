@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   aria-hidden="true"
+   focusable="false"
+   data-prefix="fad"
+   data-icon="comments-alt"
+   role="img"
+   viewBox="0 0 576 512"
+   class="svg-inline--fa fa-comments-alt fa-w-18 fa-9x"
+   version="1.1"
+   id="advisory"
+   sodipodi:docname="advisory.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata862">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs860" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2359"
+     inkscape:window-height="1501"
+     id="namedview858"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="365"
+     inkscape:cy="337.5"
+     inkscape:window-x="3178"
+     inkscape:window-y="547"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="advisory"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:pagecheckerboard="0" />
+  <path
+     fill="currentColor"
+     d="M 352,287.88748 H 162.3 l -82.8,62.1 a 9.7,9.7 0 0 1 -15.5,-7.8 v -54.2 a 64.06,64.06 0 0 1 -64,-64 v -160 a 64.06,64.06 0 0 1 64,-64 h 288 a 64.06,64.06 0 0 1 64,64 v 160 a 63.91,63.91 0 0 1 -64,63.9 z"
+     class="ico-primary"
+     id="primary" />
+  <path
+     id="secondary"
+     d="m 192,351.96991 c 0,-17.67311 14.32689,-32 32,-32 17.67311,0 32,-1e-5 32,-1e-5 h 96 c 52.98509,-0.0826 95.9174,-43.01491 96,-96 v -32.00001 c 0,-17.728 14.272,-32 32,-32 l 32,1e-5 c 35.33251,0.0331 63.9669,28.66749 64,64 v 160 c -0.0331,35.33254 -28.66749,63.96704 -64,64.00004 h -32 v 54.3007 c 0.0207,7.9933 -9.09305,12.5784 -15.5,7.7989 l -82.80079,-62.0996 H 256 c -35.33251,-0.0331 -63.9669,-28.6675 -64,-64.00004 0,0 0,-14.32688 0,-31.99999 z"
+     class="ico-secondary"
+     fill="currentColor" />
+</svg>

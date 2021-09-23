@@ -1,0 +1,119 @@
+---
+layout: default2.1
+---
+<!-- <h2 class="blog-post-title">{{ page.title | escape }}</h2> -->
+<h2 class="text-center aigelist-blue articles-section-header" style="font-weight: bold">{{ page.title | escape }}</h2>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <!-- <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }} MEH</h1> -->
+    <!-- <p class="post-meta">
+      {% capture words %}
+        {{ content | number_of_words }}
+      {% endcapture %}
+      {{ words | divided_by: 180 | append: ' minutes to read' }}
+      {%- assign date_format = site.minima.date_format | default: "%a, %b %-d, %Y" -%}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        ~ 
+        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+    </p> -->
+
+    {%- assign date_format = site.minima.date_format | default: "%a, %b %-d, %Y" -%}
+    <!-- <h2 class="blog-post-title">{{ page.title | escape }}</h2> -->
+    <p class="blog-post-meta">
+        <i class="bi bi-calendar3" title="Posted" alt="Posted"></i>
+        {{ page.date | date: date_format }}&nbsp;
+        {%- if page.author -%}
+          {% for author in page.author %}
+          <i class="bi bi-person-square" title="Author" alt="Author"></i>  
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <!-- <span class="p-author h-card" itemprop="name">{{ author }}</span></span> -->
+            <!-- <a class="blog-post-author" href="#">{{ author }}</a> -->
+            <span class="blog-post-author">{{ author }}</span>
+            {%- if forloop.last == false %}, {% endif -%}
+          {% endfor %}
+        {%- endif -%}
+        <br />
+        <i class="bi bi-paragraph" title="Words" alt="Words"></i>
+        {% capture words %}
+          {{ content | number_of_words }}
+        {% endcapture %}
+        {{ words | append: ' word(s) ' }} &nbsp;
+        <i class="bi bi-watch" title="Reading Time" alt="Reading Time"></i>
+  
+        {% assign wordCount = content | number_of_words %}
+        {% if wordCount > 180 %}
+          ~{{ words | divided_by: 180 | append: ' minute(s) read' }}
+        {% else %}
+          &lt;1 minute read
+        {% endif %}
+  
+        <br />
+        {% assign catSize = page.categories | size %}
+        {% if catSize > 0 %}
+          <i class="bi bi-folder-fill" title="Category" alt="Category"></i>
+          {% for category in page.categories %}
+            {% if forloop.index == forloop.length %}
+              {{ category | downcase }}
+            {% else %}
+              {{ category | downcase }} | 
+            {% endif %}
+          {% endfor %}
+          <br />
+        {% endif %}
+  
+        {% assign tagSize = page.tags | size %}
+        {% if tagSize > 0 %}
+          <i class="bi bi-tag-fill" title="Tags" alt="Tags"></i>
+          {% for tag in page.tags %}
+            {% if forloop.index == forloop.length %}
+              {{ tag | downcase }}
+            {% else %}
+              {{ tag | downcase }}, 
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </p>
+  </header>
+
+  <!-- <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div> -->
+
+  <article class="blog-post">
+    <p class="blog-post-content">
+      {{ content }}
+    </p>
+
+    <div class="post-nav justify-content-center">
+      <div class="post-nav-next" style="display: block; float: left; font-weight: bold;">
+        {% if page.next.url %}
+        <a href="{{page.next.url}}">&laquo;&nbsp;{{ page.next.title | truncatewords: 7 }}</a>
+        {% endif %}
+      </div>
+      <div class="post-nav-previous" style="display: block; float: right; font-weight: bold;">
+        {% if page.previous.url %}
+        <a href="{{page.previous.url}}">{{ page.previous.title | truncatewords: 7 }}&nbsp;&raquo;</a>
+        {% endif %}
+      </div>
+    </div>
+    <br>
+    <br>
+    <!-- <a class="btn btn-primary btn-sm justify-content-center" style="line-height: 0rem; text-align: center; display: block; margin: 0 auto; width: 14rem;" onclick="window.history.back()">Back</a> -->
+    <a class="btn btn-primary btn-sm text-white justify-content-center" style="line-height: 0rem; text-align: center; display: block; margin: 0 auto; width: 14rem;" href="/blog/">Main</a>
+  </article>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <!-- <a class="u-url" href="{{ page.url | relative_url }}" hidden></a> -->
+  <!-- <a class="u-url" href="{{ page.url | relative_url }}"></a> -->
+</article>

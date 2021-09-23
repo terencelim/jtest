@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   aria-hidden="true"
+   focusable="false"
+   data-prefix="fad"
+   data-icon="chart-network"
+   role="img"
+   viewBox="0 0 640 512"
+   class="svg-inline--fa fa-chart-network fa-w-20 fa-9x"
+   version="1.1"
+   id="analytics"
+   sodipodi:docname="analytics_v2.2.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata862">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs860" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1787"
+     inkscape:window-height="1155"
+     id="namedview858"
+     showgrid="false"
+     inkscape:zoom="0.7835452"
+     inkscape:cx="312.68139"
+     inkscape:cy="351.60703"
+     inkscape:window-x="3004"
+     inkscape:window-y="701"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg856"
+     inkscape:pagecheckerboard="0" />
+  <path
+     id="primary"
+     class="ico-primary"
+     d="m 223.99414,0.3203125 c -35.34622,0 -64,28.6537755 -64,63.9999995 0,35.346223 28.65378,63.999998 64,63.999998 1.12954,-0.0508 2.25754,-0.13159 3.38281,-0.24219 L 268.19922,215.5 C 241.49922,235.9 224,267.8 224,304 c -0.11925,45.89007 27.83822,87.18443 70.49023,104.11719 42.65202,16.93276 91.32005,6.0581 122.70899,-27.41797 l 95.57812,57.36719 c -0.50227,3.20038 -0.76083,6.43429 -0.77343,9.67382 0,35.34622 28.65378,64 64,64 35.34622,0 64,-28.65378 64,-64 0,-35.34622 -28.65378,-64 -64,-64 -13.93454,0.0579 -27.46944,4.66215 -38.54883,13.11329 l -95.75586,-57.45313 c 4.03981,-11.40587 6.16922,-23.40055 6.30078,-35.5 0.0332,-61.86963 -50.13037,-112.03317 -112,-112 -8.21683,0.0408 -16.4029,1.01409 -24.40039,2.90039 l -40.67383,-87.13476 c 10.93266,-11.791352 17.02615,-27.265992 17.06836,-43.345708 0,-35.346224 -28.65378,-63.9999995 -64,-63.9999995 z M 337.05469,256.01172 c 5.84028,0.1268 11.70945,1.321 17.31445,3.64258 C 372.30517,267.08335 384,284.58583 384,304 c 0,26.50967 -21.49033,48 -48,48 -19.41417,0 -36.91665,-11.69483 -44.3457,-29.63086 -7.42905,-17.93599 -3.32158,-38.58076 10.40625,-52.30859 9.43788,-9.43789 22.14551,-14.32779 34.99414,-14.04883 z"
+     fill="currentColor"
+     sodipodi:nodetypes="ssccccscccssccccccccssssssss" />
+  <path
+     id="secondary"
+     d="M 576 64 A 64 64 0 0 0 512 128 A 64 64 0 0 0 576 192 A 64 64 0 0 0 640 128 A 64 64 0 0 0 576 64 z M 576 96 A 32 32 0 0 1 608 128 A 32 32 0 0 1 576 160 A 32 32 0 0 1 544 128 A 32 32 0 0 1 576 96 z M 492.86133 181.20312 C 490.62493 181.10004 488.33939 181.74692 486.40039 183.20117 L 454.40039 207.20117 C 449.9684 210.52518 449.07638 216.76918 452.40039 221.20117 L 459.59961 230.80078 C 462.92362 235.23278 469.16762 236.12479 473.59961 232.80078 L 505.59961 208.80078 C 510.0316 205.47677 510.92362 199.23278 507.59961 194.80078 L 500.40039 185.20117 C 498.53064 182.70818 495.7367 181.33564 492.86133 181.20312 z M 64 240.00195 A 64 64 0 0 0 0 304.00195 A 64 64 0 0 0 64 368.00195 A 64 64 0 0 0 128 304.00195 A 64 64 0 0 0 64 240.00195 z M 64 272.00195 A 32 32 0 0 1 96 304.00195 A 32 32 0 0 1 64 336.00195 A 32 32 0 0 1 32 304.00195 A 32 32 0 0 1 64 272.00195 z M 162 288 C 156.46 288 152 292.46 152 298 L 152 310 C 152 315.54 156.46 320 162 320 L 190 320 C 195.54 320 200 315.54 200 310 L 200 298 C 200 292.46 195.54 288 190 288 L 162 288 z "
+     fill="currentColor"
+     class="ico-secondary" />
+</svg>

@@ -1,0 +1,141 @@
+---
+layout: default2.1
+---
+
+<!-- This loops through the paginated posts -->
+<!-- {% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="author">
+    <span class="date">{{ post.date }}</span> 
+    <span class="date">{{ post.author }}</span> 
+    <span class="date">{{ post.categories }}</span> 
+    <span class="date">{{ post.tags }}</span>
+
+    {% capture words %}
+    {{ post.content | number_of_words | minus: 180 }}
+    {% endcapture %}
+    {% unless words contains '-' %}
+    {{ words | plus: 150 | divided_by: 150 | append: ' minutes to read' }}
+    {% endunless %}
+
+  </p>
+  <div class="content">
+    {{ post.content }}
+    {{ post.excerpt }}
+  </div>
+{% endfor %} -->
+
+{%- assign date_format = site.minima.date_format | default: "%a, %b %-d, %Y" -%}
+<h2 class="text-center aigelist-blue articles-section-header" style="font-weight: bold">Articles</h2>
+{% for post in paginator.posts %}
+<article class="blog-post">
+  <h3 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <p class="blog-post-meta">
+      <i class="bi bi-calendar3" title="Posted" alt="Posted"></i>
+      {{ post.date | date: date_format }}&nbsp;
+      <!-- @ {{ post.time }}  -->
+      {%- if post.author -%}
+        {% for author in post.author %}
+          <i class="bi bi-person-square" title="Author" alt="Author"></i>  
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <!-- <span class="p-author h-card" itemprop="name">{{ author }}</span></span> -->
+          <!-- <a class="blog-post-author" href="#">{{ author }}</a> -->
+          <span class="blog-post-author">{{ author }}</span>
+          {%- if forloop.last == false %}, {% endif -%}
+        {% endfor %}
+      {%- endif -%}
+
+      <br />
+      <i class="bi bi-paragraph" title="Words" alt="Words"></i>
+      {% capture words %}
+        {{ post.content | number_of_words }}
+      {% endcapture %}
+      {{ words | append: ' word(s) ' }} &nbsp;
+      <i class="bi bi-watch" title="Reading Time" alt="Reading Time"></i>
+
+      {% assign wordCount = post.content | number_of_words %}
+      {% if wordCount > 180 %}
+        ~{{ words | divided_by: 180 | append: ' minute(s) read' }}
+      {% else %}
+        &lt;1 minute read
+      {% endif %}
+
+      <br />
+      {% assign catSize = post.categories | size %}
+      {% if catSize > 0 %}
+        <i class="bi bi-folder-fill" title="Category" alt="Category"></i>
+        {% for category in post.categories %}
+          {% if forloop.index == forloop.length %}
+            {{ category | downcase }}
+          {% else %}
+            {{ category | downcase }} | 
+          {% endif %}
+        {% endfor %}
+        <br />
+      {% endif %}
+
+      {% assign tagSize = post.tags | size %}
+      {% if tagSize > 0 %}
+        <i class="bi bi-tag-fill" title="Tags" alt="Tags"></i>
+        {% for tag in post.tags %}
+          {% if forloop.index == forloop.length %}
+            {{ tag | downcase }}
+          {% else %}
+            {{ tag | downcase }}, 
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+  </p>
+  <p class="blog-post-content">
+    <!-- {{ post.excerpt }} -->
+    {{ post.excerpt }}
+  </p>
+</article>
+{% endfor %}
+
+
+
+
+
+
+<!-- Pagination links -->
+<nav class="mt-auto" aria-label="blog">
+
+{% if paginator.total_pages > 1 %}
+<ul class="pagination justify-content-center">
+  {% if paginator.previous_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+  {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="#">{{ page }}</a>
+      </li>
+    {% elsif page == 1 %}
+      <li class="page-item"><a class="page-link" href="{{ '/blog' | relative_url }}">{{ page }}</a></li>
+    {% else %}
+      <li class="page-item"><a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a></li>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <li class="page-item">
+      <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Next</a>
+    </li>
+  {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+    </li>
+  {% endif %}
+</ul>
+{% endif %}
+
+</nav>

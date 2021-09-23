@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   aria-hidden="true"
+   focusable="false"
+   data-prefix="fad"
+   data-icon="chart-network"
+   role="img"
+   viewBox="0 0 640 512"
+   class="svg-inline--fa fa-chart-network fa-w-20 fa-9x"
+   version="1.1"
+   id="analytics"
+   sodipodi:docname="analytics.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata862">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs860" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1787"
+     inkscape:window-height="1155"
+     id="namedview858"
+     showgrid="false"
+     inkscape:zoom="1.5670904"
+     inkscape:cx="425.62956"
+     inkscape:cy="304.0667"
+     inkscape:window-x="2759"
+     inkscape:window-y="494"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg856"
+     inkscape:pagecheckerboard="0" />
+  <path
+     id="primary"
+     class="ico-primary"
+     d="M 223.99414 0.3203125 A 64 64 0 0 0 159.99414 64.320312 A 64 64 0 0 0 223.99414 128.32031 A 64 64 0 0 0 227.37695 128.07812 L 268.19922 215.5 C 241.49922 235.9 224 267.8 224 304 C 223.88075 349.89007 251.83822 391.18443 294.49023 408.11719 C 337.14225 425.04995 385.81028 414.17529 417.19922 380.69922 L 512.77734 438.06641 A 64 64 0 0 0 512.00391 447.74023 A 64 64 0 0 0 576.00391 511.74023 A 64 64 0 0 0 640.00391 447.74023 A 64 64 0 0 0 576.00391 383.74023 A 64 64 0 0 0 537.45508 396.85352 L 441.69922 339.40039 C 445.73903 327.99452 447.86844 315.99984 448 303.90039 C 448.0332 242.03076 397.86963 191.86722 336 191.90039 C 327.78317 191.94119 319.5971 192.91448 311.59961 194.80078 L 270.92578 107.66602 A 64 64 0 0 0 287.99414 64.320312 A 64 64 0 0 0 223.99414 0.3203125 z M 223.99414 32.320312 A 32 32 0 0 1 255.99414 64.320312 A 32 32 0 0 1 223.99414 96.320312 A 32 32 0 0 1 191.99414 64.320312 A 32 32 0 0 1 223.99414 32.320312 z M 337.05469 256.01172 C 342.89497 256.13852 348.76414 257.33272 354.36914 259.6543 C 372.30517 267.08335 384 284.58583 384 304 C 384 330.50967 362.50967 352 336 352 C 316.58583 352 299.08335 340.30517 291.6543 322.36914 C 284.22525 304.43315 288.33272 283.78838 302.06055 270.06055 C 311.49843 260.62266 324.20606 255.73276 337.05469 256.01172 z M 576.00391 415.74023 A 32 32 0 0 1 608.00391 447.74023 A 32 32 0 0 1 576.00391 479.74023 A 32 32 0 0 1 544.00391 447.74023 A 32 32 0 0 1 576.00391 415.74023 z "
+     fill="currentColor" />
+  <path
+     id="secondary"
+     d="M 576 64 A 64 64 0 0 0 512 128 A 64 64 0 0 0 576 192 A 64 64 0 0 0 640 128 A 64 64 0 0 0 576 64 z M 576 96 A 32 32 0 0 1 608 128 A 32 32 0 0 1 576 160 A 32 32 0 0 1 544 128 A 32 32 0 0 1 576 96 z M 492.86133 181.20312 C 490.62493 181.10004 488.33939 181.74692 486.40039 183.20117 L 454.40039 207.20117 C 449.9684 210.52518 449.07638 216.76918 452.40039 221.20117 L 459.59961 230.80078 C 462.92362 235.23278 469.16762 236.12479 473.59961 232.80078 L 505.59961 208.80078 C 510.0316 205.47677 510.92362 199.23278 507.59961 194.80078 L 500.40039 185.20117 C 498.53064 182.70818 495.7367 181.33564 492.86133 181.20312 z M 64 240.00195 A 64 64 0 0 0 0 304.00195 A 64 64 0 0 0 64 368.00195 A 64 64 0 0 0 128 304.00195 A 64 64 0 0 0 64 240.00195 z M 64 272.00195 A 32 32 0 0 1 96 304.00195 A 32 32 0 0 1 64 336.00195 A 32 32 0 0 1 32 304.00195 A 32 32 0 0 1 64 272.00195 z M 162 288 C 156.46 288 152 292.46 152 298 L 152 310 C 152 315.54 156.46 320 162 320 L 190 320 C 195.54 320 200 315.54 200 310 L 200 298 C 200 292.46 195.54 288 190 288 L 162 288 z "
+     fill="currentColor"
+     class="ico-secondary" />
+</svg>

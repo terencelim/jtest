@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+    <body id="page-top">
+        <!-- Navigation-->
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="img-fluid mb-lg-0" src="{{ "/assets/img/20210902-Aigelist-Banner-Logo.svg" | relative_url }}" alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#about">Who We Are</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="resources.html">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Articles</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <!-- Masthead-->
+        <header class="masthead masthead_blog">
+            <div class="container d-flex h-100 align-items-center"><div class="mx-auto text-center"></div></div>
+        </header>
+        <h2 class="text-center aigelist-blue articles-section-header" style="font-weight: bold">&nbsp;</h2>
+        <!-- Articles-->
+        <section id="blog">
+            <div class="container">
+                {{ content }}
+            </div>
+        </section>
+        <!-- Footer-->
+        <!-- Footer-->
+        <footer class="footer bg-footer small text-center mt-auto text-white"><div class="container">© 2021 Aigelist Pty Ltd</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <!-- Core theme JS-->
+        <script src="{{ "assets/js/scripts.js" | relative_url }}"></script>
+    </body>
+</html>
