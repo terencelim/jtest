@@ -30,6 +30,8 @@ url: "https://aigelist.github.io/jtest" # the base hostname & protocol for your 
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# page_excerpts: true
+
 repository: ""
 
 github:
@@ -41,7 +43,11 @@ github:
 
 
 # Outputting
-permalink: /:categories/:title/
+# ==========
+# https://jekyllrb.com/docs/permalinks/
+# permalink: /:categories/:year/:month/:day/:title:output_ext # default
+# permalink: date # Default Shorthand for Above
+# permalink: /:categories/:title/ # Minima Default
 paginate: 5 # amount of posts to show
 paginate_path: /blog/page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
