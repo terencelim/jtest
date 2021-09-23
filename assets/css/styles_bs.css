@@ -14981,7 +14981,7 @@ h2.mb-4 {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: url("{{ "assets/img/20210902-Aigelist-Web-Background.svg" | absolute_url }}");
+  background: url("../img/20210902-Aigelist-Web-Background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -15025,7 +15025,7 @@ h2.mb-4 {
 
 .masthead_blog {
   /* background: url("../assets/img/20210902-Aigelist-Web-Background-2-cropped.png"); */
-  background: url("{{ "assets/img/20210902-Aigelist-Web-Background-2-cropped.png" | absolute_url }}");
+  background: url("../img/20210902-Aigelist-Web-Background-2-cropped.png");
   height: 0 !important;
   background-position: top !important;
   background-repeat: no-repeat !important;
