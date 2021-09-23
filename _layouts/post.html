@@ -95,19 +95,19 @@ layout: default2.1
     <div class="post-nav justify-content-center">
       <div class="post-nav-next" style="display: block; float: left; font-weight: bold;">
         {% if page.next.url %}
-        <a href="{{page.next.url}}">&laquo;&nbsp;{{ page.next.title | truncatewords: 7 }}</a>
+        <a href="{{page.next.url | prepend: site.url }}">&laquo;&nbsp;{{ page.next.title | truncatewords: 7 }}</a>
         {% endif %}
       </div>
       <div class="post-nav-previous" style="display: block; float: right; font-weight: bold;">
         {% if page.previous.url %}
-        <a href="{{page.previous.url}}">{{ page.previous.title | truncatewords: 7 }}&nbsp;&raquo;</a>
+        <a href="{{page.previous.url | prepend: site.url }}">{{ page.previous.title | truncatewords: 7 }}&nbsp;&raquo;</a>
         {% endif %}
       </div>
     </div>
     <br>
     <br>
     <!-- <a class="btn btn-primary btn-sm justify-content-center" style="line-height: 0rem; text-align: center; display: block; margin: 0 auto; width: 14rem;" onclick="window.history.back()">Back</a> -->
-    <a class="btn btn-primary btn-sm text-white justify-content-center" style="line-height: 0rem; text-align: center; display: block; margin: 0 auto; width: 14rem;" href="/blog/">Main</a>
+    <a class="btn btn-primary btn-sm text-white justify-content-center" style="line-height: 0rem; text-align: center; display: block; margin: 0 auto; width: 14rem;" href="{{ "/blog/" | prepend: site.url }}">Main</a>
   </article>
 
   {%- if site.disqus.shortname -%}
