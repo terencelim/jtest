@@ -29,7 +29,7 @@ layout: default2.1
 <h2 class="text-center aigelist-blue articles-section-header" style="font-weight: bold">Articles</h2>
 {% for post in paginator.posts %}
 <article class="blog-post">
-  <h3 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <h3 class="blog-post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h3>
   <p class="blog-post-meta">
       <i class="bi bi-calendar3" title="Posted" alt="Posted"></i>
       {{ post.date | date: date_format }}&nbsp;
