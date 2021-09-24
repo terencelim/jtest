@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  "What is Intelligent Automation!"
-categories: 
-- automation
-- intelligent
+category: automation
 author:
 - jack black
 - steve martin

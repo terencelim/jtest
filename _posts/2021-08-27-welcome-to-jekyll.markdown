@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2021-08-27 18:14:37 +1000
-categories: jekyll update
+category: jekyll
 author:
 - jack black
 - steve martin

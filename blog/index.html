@@ -27,6 +27,10 @@ layout: default2.1
 
 {%- assign date_format = site.minima.date_format | default: "%a, %b %-d, %Y" -%}
 <h2 class="text-center aigelist-blue articles-section-header" style="font-weight: bold">Articles</h2>
+
+<!-- All Posts | Categories | Tags | List by Date -->
+<a href="{{ '/blog/category.html' | prepend: site.url }}">Category</a>
+
 {% for post in paginator.posts %}
 <article class="blog-post">
   <h3 class="blog-post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h3>
@@ -101,41 +105,96 @@ layout: default2.1
 
 <!-- Pagination links -->
 <nav class="mt-auto" aria-label="blog">
-
-{% if paginator.total_pages > 1 %}
-<ul class="pagination justify-content-center">
-  {% if paginator.previous_page %}
-    <li class="page-item">
-      <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.url }}" tabindex="-1" aria-disabled="true">Previous</a>
-    </li>
-  {% else %}
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-    </li>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <li class="page-item active" aria-current="page">
-        <a class="page-link" href="#">{{ page }}</a>
+  {% if paginator.total_pages > 1 %}
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.url }}" tabindex="-1" aria-disabled="true">Previous</a>
       </li>
-    {% elsif page == 1 %}
-      <li class="page-item"><a class="page-link" href="{{ '/blog' | prepend: site.url }}">{{ page }}</a></li>
     {% else %}
-      <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.url | replace: ':num', page }}">{{ page }}</a></li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
     {% endif %}
-  {% endfor %}
 
-  {% if paginator.next_page %}
-    <li class="page-item">
-      <a class="page-link" href="{{ paginator.next_page_path | prepend: site.url }}">Next</a>
-    </li>
-  {% else %}
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
-    </li>
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">{{ page }}</a>
+        </li>
+      {% elsif page == 1 %}
+        <li class="page-item"><a class="page-link" href="{{ '/blog' | prepend: site.url }}">{{ page }}</a></li>
+      {% else %}
+        <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.url | replace: ':num', page }}">{{ page }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.url }}">Next</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+      </li>
+    {% endif %}
+  </ul>
   {% endif %}
-</ul>
-{% endif %}
 
 </nav>
+
+
+<div class="tags-expo">
+  <div class="tags-expo-list">
+    {% for tag in site.categories %}
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    {% endfor %}
+  </div>
+  <hr/>
+  <div class="tags-expo-section">
+    {% for tag in site.categories %}
+    <h2 id="{{ tag[0] | slugify }}">{{ tag | first }}</h2>
+    <ul class="tags-expo-posts">
+      {% for post in tag[1] %}
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+      <li>
+        {{ post.title }}
+      <small class="post-date">{{ post.date | date_to_string }}</small>
+      </li>
+      </a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="blog-tags"> 
+  {% assign tags = site.categories | sort %}
+  {% for tag in tags %}
+  <a href="#{{ tag[0] | slugify }}" class="btn btn-default" style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%"> <!-- style="color: #1C1C1C;" is font color of cloud index -->
+    <span class="fa fa-folder-open" aria-hidden="true"> 
+      {{ tag[0] }} <i class="badge">{{ tag | last | size }}</i>
+    </span>
+  </a>
+  {% endfor %}
+</div>
+<hr/> 
+<div class="post-preview"> 
+  {% for tag in tags %} 
+    <h2 id="{{ tag[0] | slugify }}" style="padding-top: 70px;"> {{ tag[0] }}  <i class="badge">{{ tag | last | size }}</i></h2>
+    <ul class="later on">
+      {% for post in tag[1] %}
+        <a class="post-subtitle" href="{{ site.baseurl }}{{ post.url }}">
+      <li>
+        {{ post.title }}
+      <small class="post-meta"> - Posted on {{ post.date | date: "%B %-d, %Y" }}</small>
+      </li>
+      </a>
+      {% endfor %}
+    </ul>
+      <a href="#top" class="btn btn-default">
+        <span class="fa fa-refresh" aria-hidden="true"></span> Go back to the top
+      </a> 
+      <hr/>
+  {% endfor %}
+</div>
