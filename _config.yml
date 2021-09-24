@@ -91,3 +91,4 @@ exclude:
   - dist
   - ga.md
   - package.json
+  - tl.md
